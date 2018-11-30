@@ -11,7 +11,10 @@ body {
 
 h1 {
   font-family: 'PT Sans', sans-serif;
+  color: #000000;
+  padding-left: 1em;
 }
+
 
 .gallery{
 	width: 95%;
@@ -19,17 +22,39 @@ h1 {
 	margin:0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 10px;
+	grid-column-gap: 2px;
 }
 
 .gallery img{
-	width: 100%;
-}
-
-.thumbnail img{
-	width: 100%;
+	width: 85%;
+	padding: .5rem .5rem;
 }
 
 .item{
 	border: 2px solid black;
+}
+
+btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
 }

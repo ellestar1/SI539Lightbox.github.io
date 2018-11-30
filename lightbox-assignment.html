@@ -2,25 +2,62 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lightbox.css">
 	<link href="https://fonts.googleapis.com/css?family=PT%7cSans" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>Lightbox Examples</title>
 </head>
 <body>
-<h1> A collection of Landscape Images from my Travels</h1>
-	<div<!--  class="gallery"> -->
-		<a href="/images/H_NEEDLE.jpg" data-lightbox="A sample of needlepoint" data-title="Needlepoint Sample"><img src="/images/thumbs/H_NEEDLE_SM.jpg" alt="Needlepoint sample">A Needlepoint sample.</a>
-		<a href="/images/H_BAR.JPG" data-lightbox="A Singapore Sling at the Longbar, Raffles Hotel, Singapore" data-title="A Singapore Sling at the Longbar">A Singapore Sling at the Longbar</a>
+<h1> A collection of Images from my Travels</h1><br>
+<section role="main"> 
+    <div class="btn-group">
+      <button type="button" class="control mixitup-control-active" data-filter="all">ALL</button>
+      <button type="button" class="control" data-toggle=".red">ART</button>
+      <button type="button" class="control" data-toggle=".green">TRAVEL</button>
+      <button type="button" class="control" data-toggle=".orange">MICHIGAN</button>
+      <button type="button" class="control" data-toggle=".blue">MISC</button>
+    </div>
 
-</div>
-
-		<div class="gallery">
-    <h1>A collection of Portrait Images from my Travels</h1>
-
-    	<a class="gallery" href="/images/W_SFBAY.jpg" data-lightbox="San Francisco Bay & The Famous Golden Gate Bridge" data-title="Needlepoint"><iMG src="/images/thumbs/W_SFBAY.jpg_SM" alt="SF Bay and Golden Gate Bridge">San Francisco Bay and the famous Golden Gate Bridge</a>
+<br>
+	<div class="gallery">
+		<a class= "mix red" href="images/H_NEEDLE.jpg" data-lightbox="gallery" data-title="Needlepoint on the train">
+			<img class= "mix red" src="images/thumbs/H_NEEDLE_SM.jpg" alt="example of needlepoint">
+			</a>
+		<a class="mix green" href="images/H_BAR.JPG" data-lightbox="gallery" data-title="A Singapore Sling at the Raffles Hotel, Singapore">
+			<img class="mix green" src="images/thumbs/H_BAR_SM.jpg" alt="A Singapore Sling drink">
+			</a>
+    	<a class= "mix green" href="images/W_SFBAY.jpg" data-lightbox="gallery data-title="San Francisco Bay and the incomparable Golden Gate Bridge"> 
+    		<img class="mix green" src="images/thumbs/W_SFBAY_SM.jpg" alt="SF BAY & Golden Gate Brige">
+    		</a>
+    	<a class= "mix blue orange" href="images/W_CAR.jpg"  data-lightbox="gallery" data-title="Chevy Corvair, A Classic Car"> 
+    		<img class="mix blue orange" src="images/thumbs/W_CAR_SM.jpg" alt="Chevy Corvair, A Classic Car">
+    		</a>
+    	<a class= "mix green" href="images/H_FLOWER.jpg" data-lightbox="gallery" data-title="Wildflowers in Tasmania, AUS"> 
+    		<img class="mix green" src="images/thumbs/H_FLOWER_SM.jpg" alt="Wildflowers in Tasmania, AUS">
+    		</a>	
+    	<a class="mix blue red" href="images/H_MASKS.jpg" data-lightbox="gallery" data-title="First Nations Masks, BC, Canada"> 
+    		<img class="mix blue red" src="images/thumbs/H_MASKS_SM.jpg" alt="First Nations Masks, BC, Canada">
+    		</a>
+    	<a class= "mix red" href="images/H_TEAPOT.jpg" data-lightbox="gallery" data-title="Artichoke Teapot, Melbourne, AUS"> 
+    		<img class="mix red" src="images/thumbs/H_TEAPOT_SM.jpg" alt="Asian Artichoke Teapot, Melbourne, AUS">
+    		</a>
+    	<a class="mix blue orange" href="images/H_PHONE.jpg" data-lightbox="gallery" data-title="What happened to my phone when I fell off the Amtrak..."> 
+    		<img class="mix blue orange" src="images/thumbs/H_PHONE_SM.jpg" alt="a very broken iPhone">
+    		</a>
+    	<a class= "mix orange" href="images/W_SMOKE.jpg" data-lightbox="gallery" data-title="Port City Smokehouse, Michigan -- delicious fish!"> 
+    		<img class="mix orange" src="images/thumbs/W_SMOKE_SM.jpg" alt="Port City Smokehouse, Michigan">
+    		</a>
 
 	</div>
-<script src="/css/lightbox-plus-jquery.js"></script>
+</section>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+  <script>
+    var containerEl = document.querySelector('.gallery');
+
+    var mixer = mixitup(containerEl);
+  </script>
 </body>
 </html>
