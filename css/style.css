@@ -43,10 +43,6 @@ btn-group button {
     float: left; /* Float the buttons side by side */
 }
 
-.btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-}
-
 /* Clear floats (clearfix hack) */
 .btn-group:after {
     content: "";
